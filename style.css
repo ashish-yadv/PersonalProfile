@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+}
+
+*::selection {
+    color: rgb(0, 149, 255);
+    background-color: rgba(128, 0, 128, 0.729);
+}
+
+body {
+    position: relative;
+}
+
+
+
+/* HEADER loading Animation START */
+.head {
+    overflow: hidden;
+    animation: zoom_in 0.9s ease-in-out 0s 1 forwards;
+}
+
+@keyframes zoom_in {
+    0% {
+        transform: scale(0%, 0%);
+    }
+
+    100% {
+        transform: scale(100%, 100%);
+    }
+}
+
+/* HEADER loading Animation END */
+
+
+
+.head::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(rgba(63, 3, 159, 0.8), rgba(63, 3, 159, 0.8));
+}
+
+.head .overlay {
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -30px;
+    transform: rotate(120deg);
+    z-index: -1;
+}
+
+.head a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    padding: 0 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head .navbar #header_logo {
+    width: 18%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head .navbar #header_logo #logo a>img {
+    position: relative;
+    padding-right: 3px;
+    top: 3.6px;
+}
+
+.head .navbar #header_logo #logo {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.head .navbar #header_logo #online_status {
+    font-size: 12px;
+    font-weight: 500;
+    width: 5.7vw;
+    height: 3.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0 0 6px 0px #000 inset;
+}
+
+.head .navbar #header_logo #online_status:hover {
+    background-color: #000;
+}
+
+.head .navbar #header_logo #online_btn {
+    padding-left: 3px;
+}
+
+
+
+
+/* Styling NAVBAR MENU */
+.head .navbar .navigation_menu {
+    /* background-color: red; */
+    box-sizing: border-box;
+    width: 21em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.head .navbar .navigation_menu li {
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 30px;
+}
+
+.head .navbar .navigation_menu li a:hover {
+    color: var(--blue);
+}
+
+
+/* STYLING header_middle_text */
+.head .header_middle_section {
+    width: 100%;
+    height: calc(70vh - 12vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 27px;
+    text-align: center;
+}
+
+.head .header_middle_section .heading {
+    font-size: 2.5rem;
+    line-height: 5.4vh;
+}
+
+.head .header_middle_section #specialization a {
+    color: var(--blue);
+}
+
+.btn {
+    /* background-color: red; */
+    width: 9rem;
+    height: 3.6rem;
+    /* box-sizing: border-box; */
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(120deg, rgba(63, 3, 159, 0.8), rgba(3, 16, 128, 0.8));
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(120deg, rgba(74, 5, 186, 0.8), rgba(4, 20, 164, 0.8));
+}
+
+
+
+
+
+
+/* SERVICES Section STARTS Here*/
+#services {
+    width: 100%;
+    height: 54vh;
+    background-color: rgba(0, 0, 0, 0.152);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+#services_inner_container {
+    width: 100%;
+    height: 40vh;
+    /* background-color: rgba(0, 238, 255, 0.152); */
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.icons {
+    font-size: 60px;
+    color: blue;
+}
+
+#services h3 {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+#services p {
+    color: #000;
+    font-weight: 500;
+}
+
+#services .services_content {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    row-gap: 30px;
+    text-align: center;
+}
+
+#services #learn_more {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 400;
+    background: transparent;
+    border-color: var(--purple);
+    color: var(--purple);
+    outline: none;
+    transition: 0.3s;
+}
+
+#services #learn_more:hover {
+    cursor: pointer;
+    background: var(--purple);
+    color: #fff;
+}
+
+/* SERVICES Section ENDS Here*/
+
+
+/* Portfolio section starts here */
+.portfolio {
+    width: 100%;
+    height: 30vh;
+    background-color: red;
+}
+
+.portfolio h1 {
+    color: var(--dark);
+}
+
+/* Portfolio section ends here */
+
+
+
+/* Pricing section starts here */
+.pricing {
+    width: 100%;
+    height: 118vh;
+    box-sizing: border-box;
+    background: var(--purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pricing>h3 {
+    color: #fff;
+}
+
+.pricing p,
+h3 {
+    color: #000;
+}
+
+.plans {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.plans div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    position: relative;
+    overflow: hidden;
+}
+
+.plans h3 {
+    z-index: +1;
+}
+
+.plans .info_icon {
+    font-size: 0.6rem;
+    position: relative;
+    bottom: 3px;
+    left: 3px;
+}
+
+.plans .basic_plan,
+.standard_plan,
+.premium_plan {
+    width: 300px;
+    background: rgba(193, 192, 192, 0.277);
+    border-radius: 12px;
+    margin: 30px;
+    box-shadow: 0 0 30px 0 #0000004f;
+    box-sizing: border-box;
+}
+
+.plans a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Designing each plan div (START) */
+.basic_plan {
+    height: 16.2rem;
+}
+
+.basic_plan::after {
+    width: 600px;
+    height: 180px;
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -290px;
+    transform: rotate(110deg);
+    background-color: rgba(70, 69, 69, 0.33);
+}
+
+.basic_plan::before {
+    width: 600px;
+    height: 180px;
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -90px;
+    transform: rotate(-10deg);
+    background-color: rgba(70, 69, 69, 0.33);
+}
+
+.basic_plan ul {
+    list-style: none;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basic_plan ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#basic_plan_btn {
+    background: transparent;
+    color: var(--dark);
+    border: 1px solid var(--dark);
+}
+
+#basic_plan_btn:hover,
+#basic_plan_btn:hover a {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.standard_plan {
+    height: 27rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.standard_plan::after {
+    width: 600px;
+    height: 180px;
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -290px;
+    transform: rotate(110deg);
+    background-color: #4024cc78;
+}
+
+.standard_plan::before {
+    width: 600px;
+    height: 180px;
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -90px;
+    transform: rotate(-10deg);
+    background-color: var(--purple);
+}
+
+.standard_plan ul {
+    list-style: none;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.standard_plan ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#standard_plan_btn {
+    background: var(--purple);
+    border: none;
+}
+
+#standard_plan_btn a {
+    color: var(--white);
+}
+
+#standard_plan_btn:hover {
+    background-color: var(--indigo);
+}
+
+
+.premium_plan {
+    height: 33rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.premium_plan::after {
+    width: 600px;
+    height: 180px;
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -290px;
+    transform: rotate(110deg);
+    background-color: #c9a20478;
+    z-index: +2;
+}
+
+.premium_plan::before {
+    width: 600px;
+    height: 180px;
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -90px;
+    transform: rotate(-10deg);
+    background-color: var(--yellow);
+}
+
+.premium_plan ul {
+    list-style: none;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.premium_plan ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#premium_plan_btn {
+    background: var(--yellow);
+    border: none;
+}
+
+#premium_plan_btn a {
+    color: var(--white);
+}
+
+#premium_plan_btn:hover {
+    background: #ebbd04;
+}
+
+/* Designing each plan div (END) */
+
+.currency {
+    font-size: 12px;
+    letter-spacing: 0.9px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.274);
+}
+
+/* Pricing section ends here */
+
+
+
+
+/* FOOTER Section STARTS Here */
+.footer {
+    margin-top: 30px;
+    background-color: red;
+}
+
+.footer #contact {
+    width: 100%;
+    height: 21vh;
+    bottom: 0;
+    background-color: var(--dark);
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .socials {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* FOOTER Section ENDS Here */
